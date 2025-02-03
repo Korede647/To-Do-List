@@ -5,6 +5,7 @@ import { IoTrashOutline } from "react-icons/io5";
 import { IoIosAdd } from "react-icons/io";
 import { IoMdSearch } from "react-icons/io";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import { IoToggle } from "react-icons/io5";
 
 const ToDo = () => {
   const [mytodoList, setMytodoList] = useState([]);
@@ -76,6 +77,7 @@ const ToDo = () => {
     todo.toLowerCase().includes(search.toLowerCase())
   );
   return (
+    <>
     <div className="container">
       <h1 className="mytext">TO-DO List</h1>
 
@@ -112,6 +114,10 @@ const ToDo = () => {
       </div>
 
     <div className="everyContent">
+      {/* <div className="reminders">
+        
+      </div> */}
+
     <div className="content">
       <div className="myInputs">
         <ul>
@@ -153,18 +159,10 @@ const ToDo = () => {
       </div>
      </div>
 
-      <div className="reminders">
-        <h4>Reminders</h4>
-        <textarea className="remind" placeholder="Reminders"/>
-          {/* <h4>Reminders</h4> */}
-        {/* </div> */}
-        <h4>Notes</h4>
-        <textarea className="notes" placeholder="Notes"/>
-          {/* <h4>Notes</h4> */}
-        {/* </div> */}
-      </div>
     </div>
+    
     </div>
+    </>
   );
 };
 
